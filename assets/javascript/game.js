@@ -1,0 +1,1 @@
+alert('See if you can click the correct pictures to equal 76!')
