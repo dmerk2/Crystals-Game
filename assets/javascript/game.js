@@ -5,13 +5,14 @@ var pic1 = 10;
 var pic2 = 20;
 var pic3 = 3;
 var pic4 = 6;
-
-var userGuesses = [];
 var userGuess = '';
 
 
+//when the document loads this function will happen
 $(document).ready(function() {
+	//when picture one is clicked
 	$('.pic1').click(function() {
+		//the text fom variable prints as userGuess
 		$('#userGuess').text(pic1);
 
 	});
@@ -35,3 +36,4 @@ $(document).ready(function(){
 		$('#userGuess').text(pic4)		
 	});
 });
+
