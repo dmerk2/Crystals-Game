@@ -3,12 +3,9 @@
 <head>
 <meta charset='UTF-8'>
 	<title>Crystal Game</title>
-	<!--linking css to html -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- linking jquery to html -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<!-- linking javascript to html -->
-	<script src='assets/javascript/game.js' type='text/javascript'></script>
+	
 
 
 </head>
@@ -71,8 +68,7 @@ var pic1 = 10;
 var pic2 = 20;
 var pic3 = 3;
 var pic4 = 6;
-var imageCrystal = $('<img>')
-var userGuess = '';
+var userGuess = [];
 
 
 //when the document loads this function will happen
@@ -81,29 +77,26 @@ $(document).ready(function() {
 	$('.pic1').click(function() {
 		//the text fom variable prints as userGuess
 		$('#userGuess').text(pic1);
+		//pushes the userGuess into the empty array
+		userGuess.push(pic1)
 
 	});
-});
-
-$(document).ready(function() {
 	$('.pic2').click(function() {
 		$('#userGuess').text(pic2);
-
+		userGuess.push(pic2)
 	});
-});
 
-$(document).ready(function(){
 	$('.pic3').click(function(){
-		$('#userGuess').text(pic3)		
+		$('#userGuess').text(pic3)
+		userGuess.push(pic3)		
 	});
-});
 
-$(document).ready(function(){
 	$('.pic4').click(function(){
-		$('#userGuess').text(pic4)		
+		$('#userGuess').text(pic4)
+		userGuess.push(pic4)
+		console.log(userGuess)		
 	});
 });
-
 
 	</script>
 
