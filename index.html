@@ -53,16 +53,15 @@ h1{
 	<strong><h1>76</h1></strong>
 	<div id="userGuess"></div>
 	<!-- the crystal picture 4 times -->
-	<!-- pictures go from left to right -->
-	<div><button class = "pic1"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
-	<div><button class = "pic2"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
-	<div><button class = "pic3"><img src= 'https://encrypted-tbn1.gstatic.com/	images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
-	<div><button class = "pic4"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
+	<div><button class = "pic1"><img src= 'crystal.jpg'/></button></div>
+	<div><button class = "pic2"><img src= 'crystal.jpg'/></button></div>
+	<div><button class = "pic3"><img src= 'crystal.jpg'/></button></div>
+	<div><button class = "pic4"><img src= 'crystal.jpg'/></button></div>
 	
 	<script>
 		alert('See if you can click the correct pictures to equal 76!')
 
-//Pictures from left to right as variables
+
 var pic1 = 10;
 var pic2 = 20;
 var pic3 = 3;
@@ -93,12 +92,17 @@ $(document).ready(function() {
 	$('.pic4').click(function(){
 		$('#userGuess').text(pic4);
 		userGuess.push(pic4);
-		console.log(userGuess);
+		console.log(userGuess);		
 	});
 });
+// var userGuess
+// var sum = 0;
+// for (var i = 0; i < userGuess.length; i++){
+// sum+= userGuess[i]
+// }
+// console.log(sum)
 
 
-	</script>
-
+</script>
 </body>
 </html>
