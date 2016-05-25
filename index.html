@@ -5,13 +5,11 @@
 	<title>Crystal Game</title>
 	<!-- linking jquery to html -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	
-
-
 </head>
 <body>
+<!-- CSS -->
 	<style>
-		.pic1{
+.pic1{
 	float:right;
 	padding:10px;
 	margin:5px;
@@ -51,19 +49,20 @@ h1{
 	font-size:50px;
 }
 	</style>
-
+	<!-- HTML -->
 	<strong><h1>76</h1></strong>
 	<div id="userGuess"></div>
 	<!-- the crystal picture 4 times -->
-	<!-- pictures go from top left to right -->
+	<!-- pictures go from left to right -->
 	<div><button class = "pic1"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
 	<div><button class = "pic2"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
 	<div><button class = "pic3"><img src= 'https://encrypted-tbn1.gstatic.com/	images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
 	<div><button class = "pic4"><img src= 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp9KuYvyuNWx6LRSn4Qg_YLeyZ0uVxQY5-I6nthfY3D6nWzYHk'/></button></div>
+	
 	<script>
 		alert('See if you can click the correct pictures to equal 76!')
 
-//Pictures from left to right
+//Pictures from left to right as variables
 var pic1 = 10;
 var pic2 = 20;
 var pic3 = 3;
@@ -83,20 +82,21 @@ $(document).ready(function() {
 	});
 	$('.pic2').click(function() {
 		$('#userGuess').text(pic2);
-		userGuess.push(pic2)
+		userGuess.push(pic2);
 	});
 
 	$('.pic3').click(function(){
-		$('#userGuess').text(pic3)
-		userGuess.push(pic3)		
+		$('#userGuess').text(pic3);
+		userGuess.push(pic3);		
 	});
 
 	$('.pic4').click(function(){
-		$('#userGuess').text(pic4)
-		userGuess.push(pic4)
-		console.log(userGuess)		
+		$('#userGuess').text(pic4);
+		userGuess.push(pic4);
+		console.log(userGuess);
 	});
 });
+
 
 	</script>
 
