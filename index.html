@@ -5,6 +5,10 @@
 	<title>Crystal Game</title>
 	<!-- linking jquery to html -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!-- Bootstrap CSS link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<!--So it can be neatly viewed on phones-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <!-- CSS -->
@@ -34,32 +38,56 @@
 }
 
 body{
-	background-color:purple; 
+	background-image:url('crystal2.jpg'); 
+	background-size:cover;
+	color: white;
 }
+
+
 
 h1{
 	text-align:center;
-	color:white;
 	font-size:50px;
 }
 
 #userGuess{
-	color:white;
 	text-align:center;
 	font-size:50px;
 }
 	</style>
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = 'col-md-2'>
+			<p>Wins: <span id="wins">0</span></p>
+			<p>Losses: <span id="losses">0</span></p>
+		</div>
+		<div class = 'col-md-10'>
+			<strong><h1>76</h1></strong>
+			<div id="userGuess"></div>
+		</div>	
+	</div>
+	<div class = 'row'>
+		<div class="col-md-3">
+			<div><button class = "pic1"><img src= 'crystal.jpg'/></button></div>
+		</div>
+		<div class="col-md-3">
+			<div><button class = "pic2"><img src= 'crystal.jpg'/></button></div>
+		</div>
+		<div class="col-md-3">
+			<div><button class = "pic3"><img src= 'crystal.jpg'/></button></div>
+		</div>
+		<div class="col-md-3">
+			<div><button class = "pic4"><img src= 'crystal.jpg'/></button></div>
+		</div>
+	</div>
+</div>
 	<!-- HTML -->
-	<strong><h1>76</h1></strong>
-	<div id="userGuess"></div>
-	<!-- the crystal picture 4 times -->
-	<div><button class = "pic1"><img src= 'crystal.jpg'/></button></div>
-	<div><button class = "pic2"><img src= 'crystal.jpg'/></button></div>
-	<div><button class = "pic3"><img src= 'crystal.jpg'/></button></div>
-	<div><button class = "pic4"><img src= 'crystal.jpg'/></button></div>
 	
+	<!-- the crystal picture 4 times -->
+
+	<!--Javascript-->
 	<script>
-		alert('See if you can click the correct pictures to equal 76!')
+		alert('See if you can click the correct pictures to equal 76!');
 
 
 var pic1 = 10;
@@ -67,40 +95,75 @@ var pic2 = 20;
 var pic3 = 3;
 var pic4 = 6;
 var userGuess = [];
-
+var sum = 0;
+var total = 0; 
+var wins = 0; 
+var losses = 0;
 
 //when the document loads this function will happen
 $(document).ready(function() {
 	//when picture one is clicked
 	$('.pic1').click(function() {
 		//the text fom variable prints as userGuess
-		$('#userGuess').text(pic1);
 		//pushes the userGuess into the empty array
-		userGuess.push(pic1)
+		userGuess.push(pic1);
+		//finds sum of pics getting clicked
+		findSum();
 
 	});
 	$('.pic2').click(function() {
-		$('#userGuess').text(pic2);
 		userGuess.push(pic2);
+		findSum()
 	});
 
 	$('.pic3').click(function(){
-		$('#userGuess').text(pic3);
-		userGuess.push(pic3);		
+		userGuess.push(pic3);
+		findSum()
+
 	});
 
 	$('.pic4').click(function(){
-		$('#userGuess').text(pic4);
 		userGuess.push(pic4);
-		console.log(userGuess);		
+		findSum();	
 	});
 });
-// var userGuess
-// var sum = 0;
-// for (var i = 0; i < userGuess.length; i++){
-// sum+= userGuess[i]
-// }
-// console.log(sum)
+
+function findSum(){
+	console.log(userGuess);
+	for (i = 0; i < userGuess.length; i++){
+		sum += userGuess[i];
+	};
+	console.log(sum)
+	total = sum;
+	$("#userGuess").text(total)
+	sum = 0;
+	if (total === 76){
+	alert('WINNER!!');
+	wins +=1;
+	console.log(wins)
+	restart()
+}	else if (total > 76) {
+	alert('SORRY, TRY AGAIN!!');
+	losses +=1;
+	console.log(losses)
+	restart()
+};
+}
+
+function restart(){
+	 pic1 = 10;
+	 pic2 = 20;
+	 pic3 = 3;
+	 pic4 = 6;
+	 userGuess = [];
+	 sum = 0;
+	 total = 0; 
+	 $("#userGuess").text(total);
+	 $("#wins").text(wins);
+	 $("#losses").text(losses);
+}
+
+$("wins").append(color, red)
 
 
 </script>
