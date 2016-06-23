@@ -8,13 +8,14 @@
 	<!-- Bootstrap CSS link -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 	<!--So it can be neatly viewed on phones-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1
+	">
 </head>
 <body>
 
 <div class ='active'>	
 	<a href="http://music-trivia-game.herokuapp.com/">Music Trivia</a>
-	<a href="file:///Users/danmerkin/Desktop/Coding/hangman/index.html#">Music Hangman</a>
+	<a href="#">Music Hangman</a>
 	<a href="http://pyschic-game.herokuapp.com/">Psychic Game</a>
 	<a href="http://crystalgame.herokuapp.com/">Crystal Game</a>
 </div>
@@ -106,7 +107,7 @@ h1{
 
 	<!--Javascript-->
 	<script>
-		alert('See if you can click the correct pictures to equal 76!');
+alert('See if you can click the correct pictures to equal 76!');
 
 
 var pic1 = 10;
@@ -168,6 +169,9 @@ function findSum(){
 	restart()
 };
 }
+
+    $(".refresh_link").click(function(){
+     window.location="#";
 
 function restart(){
 	 pic1 = 10;
